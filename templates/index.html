@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Authentictor</title>
+</head>
+
+<h3>
+    Bill Authentictor
+</h3>
+
+    <p>
+        What is bill Authentictor? <br>
+        It is an application which uses machine learning aligorithm to predict whether a note is original or fake.<br>
+        It uses the note's charecteristics such as Variance, Skewness, Entropy and Curtosis to determine whether<br> the 
+        given qualities corresponds to an original note or a fake one. <br>
+        To predict, you needed to provide the note's charecteristics and hit the Predict button at the bottom.
+    </p>
+<h2 style="color: black;">
+    
+        Imput the following fields
+    
+    
+</h2>
+<body>
+    <h1>
+        <form action="/" method="post">
+            <input type="value" name="Variance" placeholder="Enter Variance" required>
+            <br>
+            <input type="value" name="Skewness" placeholder="Enter Skewness" required>
+            <br>
+            <input type="value" name="Curtosis" placeholder="Enter Curtosis" required>
+            <br>
+            <input type="value" name="Entropy" placeholder=" Enter Entropy" required>
+            <br>
+            <input type="submit" value="Predict">
+        </form>
+          
+    </h1>
+
+    {% if prediction %}
+    <p style="font-size: 0.5cm;"  >Your note is {{prediction}}</p>
+{% endif %}
+   
+</body>
+</html>
+
+<style>
+
+h3 {
+    padding-top: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 1cm;
+    --background: rgb(0, 0, 0);
+    margin: 0 0;
+    margin-left: 0;
+    color: rgb(0, 0, 0);
+}
+
+body  {
+    height: 100%;
+    padding-top: 60px;
+    background-color: lightskyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 0.4cm;
+    color: rgb(206, 197, 197);
+    text-align: center;
+    background-image:  url(/static/Screenshot\ \(192\).png );
+    --filter: opacity(1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 1.8;
+    background-attachment: fixed;
+    
+
+
+}
+
+</style>
